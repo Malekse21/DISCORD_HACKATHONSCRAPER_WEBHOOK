@@ -82,6 +82,8 @@ def scrape_eventbrite():
 if __name__ == "__main__":
     if not WEBHOOK_URL:
         print("Error: DISCORD_WEBHOOK not set.")
+        send_to_discord("Test Event", "Today", "https://google.com", "Test System did not work")
     else:
+        send_to_discord("Test Event", "Today", "https://google.com", "Test System")
         scrape_10times()
         scrape_eventbrite()
